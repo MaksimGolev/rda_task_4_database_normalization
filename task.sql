@@ -1,4 +1,3 @@
--- Create database and tables
 CREATE DATABASE ShopDB;
 USE ShopDB;
 
@@ -26,8 +25,6 @@ CREATE TABLE ProductInventory (
     PRIMARY KEY (ID)
 );
 
--- Populate test data
-
 INSERT INTO Countries (ID,Name)
 	VALUES (1, 'Country1');
 INSERT INTO Countries (ID,Name)
@@ -37,6 +34,9 @@ INSERT INTO Warehouses (ID,WarehouseName,WarehouseAddress,CountryID)
 	VALUES (1, 'Warehouse-1', 'City-1, Street-1',1);
 INSERT INTO Warehouses (ID,WarehouseName,WarehouseAddress,CountryID)
 	VALUES (2, 'Warehouse-2', 'City-2, Street-2',2);
+
+INSERT INTO Products (ID, ProductName)
+  VALUES (1, 'AwersomeProduct');
     
 INSERT INTO ProductInventory (ID,ProductName,WarehouseAmount,WarehousesID)
 	VALUES (1, 'AwersomeProduct', 2, 1);
